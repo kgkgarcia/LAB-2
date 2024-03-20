@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gerir.html">Gerir Perfil</a></li>
+                <li><a href="#">Terminar Sessão</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-info">
+        <img src="kevengarcia.jpeg" alt="Foto do Perfil" id="perfil">
+        <span>Olá Keven Garcia <img src="goodbye.png" alt="" id="bye"></span>
+    </div>
+
+    <main>
+        <section class="tasks">
+            <table>
+                <div class="botoes">
+                    <label for="table" id="tarefa"> As minhas tarefas</label>
+                    <button id="nova-tarefa" class="btn">+ Nova Tarefa</button>
+                </div>
+
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Data</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lavar o carro <a href="#" class="editar-tarefa" data-index="0"><img src="pencil-fill.svg"
+                                    alt=""></a></td>
+                        <td>15/03/2024</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Fazer compras <a href="#" class="editar-tarefa" data-index="1"><img src="pencil-fill.svg"
+                                    alt=""></a></td>
+                        <td>16/03/2024</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Fazer Lab 2 <a href="#" class="editar-tarefa" data-index="2"><img src="pencil-fill.svg"
+                                    alt=""></a></td>
+                        <td>20/03/2024</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <div id="modal-adicionar-tarefa" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Nova Tarefa</h2>
+                <form id="form-tarefa">
+                    <label for="descricao">Descrição</label><br>
+                    <input type="text" id="descricao" name="descricao"><br>
+                    <label for="data">Data</label><br>
+                    <input type="date" id="data" name="data"><br><br>
+                    <button type="submit">Gravar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2024 - All rights reserved by Keven Garcia</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('nova-tarefa').addEventListener('click', function () {
+            document.getElementById('modal-adicionar-tarefa').style.display = 'block';
+        });
+
+
+        document.getElementsByClassName('close')[0].addEventListener('click', function () {
+            document.getElementById('modal-adicionar-tarefa').style.display = 'none';
+        });
+
+
+        document.getElementById('form-tarefa').addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+
+            var descricao = document.getElementById('descricao').value;
+            var data = document.getElementById('data').value;
+
+
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${descricao} <a href="#" class="editar-tarefa"><img src="pencil-fill.svg" alt=""></a></td>
+                <td>${data}</td>
+                <td><input type="checkbox"></td>
+            `;
+
+            document.querySelector('tbody').appendChild(newRow);
+
+            document.getElementById('modal-adicionar-tarefa').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

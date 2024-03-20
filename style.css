@@ -1,0 +1,258 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 10px;
+
+}
+
+span {
+    font-size: 30px;
+}
+
+header {
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    border: 2px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.tasks {
+    margin-top: 20px;
+}
+
+.tasks table {
+    width: 80%;
+    border-collapse: collapse;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.tasks th,
+.tasks td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tasks th {
+    background-color: #f2f2f2;
+}
+
+.tasks input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 0 auto;
+    display: block;
+}
+
+.btn {
+    border: 2pt solid;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: inline;
+}
+
+#bye {
+    width: 30px;
+    height: 30px;
+}
+
+.voltar button {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button {
+    display: inline;
+    margin-right: 10px;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botoes label {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+.botoes button {
+    margin-left: 10px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 0;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.modal-content input[type="text"] {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(124, 207, 0);
+    color: white;
+}
+
+.modal h2 {
+    font-size: 24px;
+
+}
+
+.modal label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.menu-gerir {
+    border: 1pt solid black;
+    border-radius: 5px;
+    width: 40%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: auto;
+    text-align: center;
+
+}
+
+.menu-gerir label {
+    display: flex;
+    margin: 15px 0 0 30px;
+    margin-bottom: 10px;
+}
+
+.menu-gerir input {
+    width: 90%;
+    height: 20px;
+}
+
+.menu-gerir button {
+    width: 80px;
+    height: 40px;
+    overflow-x: hidden;
+    background-color: rgb(124, 207, 0);
+    color: white;
+}
+
+.menu-gerir div {
+    margin: 15px 0 0 15px;
+}
+
+
+.menu-gerir img {
+    display: block;
+    margin: 15px auto 0;
+    height: 170px;
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+h2 {
+    font-size: 20pt;
+    margin-bottom: 15px;
+    text-align: center;
+}
